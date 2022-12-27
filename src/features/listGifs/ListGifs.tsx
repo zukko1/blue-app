@@ -1,3 +1,6 @@
+import { Container, Row } from 'react-bootstrap'
+import { useAppSelector } from '../../app/hooks'
+import { selectGifs } from '../search/searchSlice'
 import { Gif } from '../search/types'
 import { Item } from './Gif'
 
@@ -5,15 +8,14 @@ type propsList = {
   gifs: Gif[]
 }
 
-export const ListaGifs = (props: propsList) => {
+export const ListaGifs = () => {
+  const stateSearchGifs = useAppSelector(selectGifs)
+
   return (
-    <div>
-      <h1>Lista de Gifs</h1>
-      <ul>
-        {props.gifs.map((gif) => (
-          <Item key={gif.id} gif={gif}></Item>
-        ))}
-      </ul>
-    </div>
+    <Row xs={2} md={4} className='g-4'>
+      {stateSearchGifs.gifs.map((gif) => (
+        <Item key={gif.id} gif={gif}></Item>
+      ))}
+    </Row>
   )
 }

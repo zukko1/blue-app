@@ -5,13 +5,9 @@ export type SearchState = {
   gifs: Gif[]
 }
 
-export type SearchAction =
-  | { type: 'searchGifsStart' }
-  | { type: 'searchGifsStart'; payload: { data: Gif[] } }
-  | { type: 'searchGifsError'; payload: string }
-
 export type Gif = {
   id: string
+  title: string
   images: {
     original: {
       url: string

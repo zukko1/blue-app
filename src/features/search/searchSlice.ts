@@ -8,31 +8,18 @@ const initialState: SearchState = {
   loading: false,
   error: null,
   query: null,
-  gifs:  [],
+  gifs: [],
 }
 
 export const fetchSearch = createAsyncThunk('search/fetchSearcch', async (query: string) => {
-  const response: AxiosResponse<{ data: Gif[]}> = await fetchSearchGifs(query)
+  const response: AxiosResponse<{ data: Gif[] }> = await fetchSearchGifs(query)
   return response.data.data
 })
 
 const searchSlice = createSlice({
   name: 'search',
   initialState,
-  reducers: {
-    searchGifsStart: (state: SearchState) => {
-      state.loading = true
-      state.error = null
-    },
-    searchGifsSuccess: (state: SearchState, action: PayloadAction<Gif[]>) => {
-      state.loading = false
-      state.gifs = action.payload
-    },
-    searchGifsError: (state: SearchState, action: PayloadAction<string>) => {
-      state.loading = false
-      state.error = action.payload
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchSearch.pending, (state: SearchState) => {
@@ -49,8 +36,8 @@ const searchSlice = createSlice({
   },
 })
 
-export const selectGifs = (state: RootState) => state.search.gifs
-
-export const { searchGifsStart, searchGifsSuccess, searchGifsError } = searchSlice.actions
+export const selectGifs = (state: RootState) => {
+  return state.search
+}
 
 export default searchSlice.reducer

@@ -3,8 +3,8 @@ import searchReducer from '../features/search/searchSlice'
 
 export const store = configureStore({
   reducer: {
-    search: searchReducer
-  },
+    search: searchReducer,
+  }
 })
 
 export type AppDispatch = typeof store.dispatch
