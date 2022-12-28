@@ -5,6 +5,7 @@ import { Search } from './features/search/Search'
 import { ListaGifs } from './features/listGifs/ListGifs'
 import { Card, Col, Container, Row } from 'react-bootstrap'
 import Paginator from './features/paginator/Paginator'
+import ModalTab from './features/modal/ModalTab'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Paginator />
         </Card.Footer>
       </Card>
+      <ModalTab></ModalTab>
     </Container>
   )
 }

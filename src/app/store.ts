@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import modalReducer from '../features/modal/modalSlice'
 import searchReducer from '../features/search/searchSlice'
+import paginatorReducer from '../features/paginator/paginatorSlice'
 
 export const store = configureStore({
   reducer: {
     search: searchReducer,
+    modal: modalReducer,
+    paginator: paginatorReducer
   }
 })
 

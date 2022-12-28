@@ -1,11 +1,9 @@
-import { Col, Card } from 'react-bootstrap';
-import { Gif } from '../search/types'
+import { Col, Card } from 'react-bootstrap'
+import { Gif } from '../../app/types'
 
 type propsItem = {
   gif: Gif
 }
-
-
 export const Item = (props: propsItem) => {
   return (
     <Col>
