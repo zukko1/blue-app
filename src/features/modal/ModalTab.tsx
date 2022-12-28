@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import CarouselGifs from '../carousel/CarouselGifs'
-import { closeModal, selectModal, showModal } from './modalSlice'
+import { closeModal, selectModal } from './modalSlice'
 
 export default function ModalTab() {
   const dispatch = useAppDispatch()

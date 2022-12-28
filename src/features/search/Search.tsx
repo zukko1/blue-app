@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { ListaGifs } from '../listGifs/ListGifs'
+import { useAppDispatch } from '../../app/hooks'
 import { Button, Form } from 'react-bootstrap'
 
-import { fetchSearch, selectGifs, setQuery } from './searchSlice'
+import { fetchSearch, setQuery } from './searchSlice'
 
 export const Search = () => {
   const dispatch = useAppDispatch()

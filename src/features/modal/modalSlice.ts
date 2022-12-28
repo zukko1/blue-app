@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { AxiosResponse } from 'axios'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
 import { ModalState, Gif } from '../../app/types'
 
@@ -21,14 +20,14 @@ const modalSlice = createSlice({
   name: 'modal',
   initialState,
   reducers: {
-    showModal: (state: ModalState, action: PayloadAction<{gif: Gif, index: number}>) => {
+    showModal: (state: ModalState, action: PayloadAction<{ gif: Gif; index: number }>) => {
       state.gif = action.payload.gif
       state.index = action.payload.index
       state.showModal = true
     },
     closeModal: (state: ModalState) => {
-        state.showModal = false
-    }
+      state.showModal = false
+    },
   },
 })
 

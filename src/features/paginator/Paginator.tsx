@@ -1,8 +1,7 @@
-import { Button } from 'react-bootstrap'
 import Pagination from 'react-bootstrap/Pagination'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { fetchSearch, selectGifs, selectTotal } from '../search/searchSlice'
-import { selectPaginator, setPage } from './paginatorSlice'
+import { setPage } from './paginatorSlice'
 
 const Paginator = () => {
   const dispatch = useAppDispatch()

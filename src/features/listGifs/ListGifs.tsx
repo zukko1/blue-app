@@ -1,13 +1,8 @@
-import { Container, Row } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { selectGifs } from '../search/searchSlice'
-import { Gif } from '../../app/types'
 import { Item } from './Gif'
 import { showModal } from '../modal/modalSlice'
-
-type propsList = {
-  gifs: Gif[]
-}
 
 export const ListaGifs = () => {
   const stateSearchGifs = useAppSelector(selectGifs)

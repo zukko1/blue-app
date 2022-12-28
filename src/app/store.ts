@@ -7,8 +7,8 @@ export const store = configureStore({
   reducer: {
     search: searchReducer,
     modal: modalReducer,
-    paginator: paginatorReducer
-  }
+    paginator: paginatorReducer,
+  },
 })
 
 export type AppDispatch = typeof store.dispatch

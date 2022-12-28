@@ -3,7 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Search } from './features/search/Search'
 import { ListaGifs } from './features/listGifs/ListGifs'
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Card, Container } from 'react-bootstrap'
 import Paginator from './features/paginator/Paginator'
 import ModalTab from './features/modal/ModalTab'
 

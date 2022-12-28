@@ -2,7 +2,7 @@ export type SearchState = {
   loading: boolean
   error: string | null
   query: string | null
-  gifs: Gif[],
+  gifs: Gif[]
   pagination: CammelPaginatorState
 }
 
